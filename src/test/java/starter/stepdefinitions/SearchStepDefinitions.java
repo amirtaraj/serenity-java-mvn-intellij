@@ -57,6 +57,13 @@ public class SearchStepDefinitions {
         );
     }
 
+    @Then("{actor} should see details about {string}")
+    public void should_see_details_about(Actor actor, String reviewKey) {
+        actor.attemptsTo(
+                Ensure.that(DashboardPage.ReviewKey).containsElements("//th[contains(text(),\'" + reviewKey + "\')]")
+        );
+    }
+
     @Then("{actor} should see the option {string} selected in the dropdown with ID {string}")
     public void thenOptionShouldBeSelected(Actor actor, String expectedOption, String option) {
         actor.attemptsTo(

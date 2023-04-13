@@ -6,6 +6,11 @@ Feature: ODNxt Dashboard
     Then he should see the option "select_fiscalYear" selected in the dropdown with ID "2023"
     When Client clicks the element with ID "th_reviewId_1001"
     Then he should see information about "1001"
+    When Client clicks the element with ID "lnk_menu_dashboard"
+    When Client clicks the element with ID "lnk_new_viewall"
+    Then he should see details about "Review Key"
+
+
 
   Scenario:  Candidate Pool Page
     Given Client wants to access the Homepage
