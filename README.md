@@ -1,1 +1,0 @@
-# serenity-java-mvn-intellij
